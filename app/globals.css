@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #DC2626;
+  --color-primary-light: #F87171;
+  --color-background: #0F172A;
+  --color-background-elevated: #1E293B;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #64748B;
+  --color-accent: #06B6D4;
+  --color-border: #334155;
+  
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-background-elevated {
+  background-color: var(--color-background-elevated);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+/* Button Components */
+.btn-primary {
+  @apply bg-primary hover:bg-primary-light text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-background-elevated hover:bg-accent/10 text-text-primary border border-border font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+}
+
+/* Card Components */
+.card {
+  @apply bg-background-elevated border border-border rounded-xl p-6;
+}
+
+.card-hover {
+  @apply card hover:border-primary/50 transition-colors duration-200;
+}
+
+/* Input Components */
+.input {
+  @apply bg-background-elevated border border-border text-text-primary placeholder-text-muted rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors duration-200;
+}
+
+/* Badge Components */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply badge bg-primary/20 text-primary;
+}
+
+.badge-accent {
+  @apply badge bg-accent/20 text-accent;
+}
+
+/* Typography Utilities */
+.heading-1 {
+  @apply font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary leading-tight;
+}
+
+.heading-2 {
+  @apply font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary leading-tight;
+}
+
+.heading-3 {
+  @apply font-heading text-xl md:text-2xl font-semibold text-text-primary leading-tight;
+}
+
+.body-large {
+  @apply text-lg text-text-secondary leading-relaxed;
+}
+
+.body {
+  @apply text-base text-text-secondary leading-relaxed;
+}
+
+/* Prose-like content styling */
+.prose {
+  @apply text-text-secondary leading-relaxed;
+}
+
+.prose h1 {
+  @apply heading-1 mb-6;
+}
+
+.prose h2 {
+  @apply heading-2 mb-4 mt-8;
+}
+
+.prose h3 {
+  @apply heading-3 mb-3 mt-6;
+}
+
+.prose p {
+  @apply body mb-4;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal list-inside mb-4 space-y-2;
+}
+
+.prose a {
+  @apply text-accent hover:text-primary transition-colors duration-200;
+}
+
+/* Layout utilities */
+.container-custom {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
